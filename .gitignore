@@ -909,3 +909,22 @@ bin/
 
 # general
 *.class
+
+# OCaml / Dune
+*.annot
+*.cmo
+*.cma
+*.cmi
+*.a
+*.o
+*.cmx
+*.cmxs
+*.cmxa
+*.cmt
+*.cmti
+_build/
+*.byte
+*.native
+.merlin
+*.install
+_opam/

@@ -891,7 +891,7 @@ build/
 .project
 .settings
 .worksheet
-bin/
+#bin/
 .cache
 
 # intellij idea
@@ -928,3 +928,6 @@ _build/
 .merlin
 *.install
 _opam/
+
+!Assignment*/bin/
+!Assignment*/bin/**

@@ -1,12 +1,11 @@
 # File: tokenizer.py
-# Author: Adam Edwards (with help from ChatGPT)
+# Author: Adam Edwards
 # Date: 9/13/2026
-# Purpose:
-# Tokenize commands for the simple shell defined in Assignment 03.
+# Purpose: Tokenize commands for the Assignment 03 simple shell.
 #
-# AI Assistance:
-# ChatGPT was used to help adapt the tokenizer structure from
-# the Module02F class example to the Assignment 03 shell grammar.
+# Template: Adapted from Dr. Lewis's Module02PartF Python lexer example.
+# AI Help: ChatGPT helped adapt the tokens, keywords, and regex patterns
+# to the Assignment 03 grammar.
 
 import re
 from enum import Enum, auto

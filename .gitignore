@@ -50,7 +50,7 @@ flycheck_*.el
 
 # Latex ignores
 # We generate all output, so igore PDF and DVI
-*.pdf
+# *.pdf
 *.dvi
 # Definitely want to igore LaTeX temp files
 *.aux

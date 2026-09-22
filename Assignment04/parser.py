@@ -9,7 +9,9 @@
 # AI Help: ChatGPT helped adapt the parser, validation, and AST
 # construction to the Assignment 03 grammar. Claude helped plan and
 # draft the Assignment 04 extension (set/echo commands, expression
-# parsing, variables, and the symbol table).
+# parsing, variables, and the symbol table), and helped tighten the
+# grammar comment's character-class rules per Dr. Lewis's Assignment 03
+# feedback.
 
 # EBNF Grammar:
 #
@@ -28,38 +30,19 @@
 # term = factor, { ("*" | "/"), factor };
 # factor = variable | terminal | "(", expression, ")";
 #
-# variable = "$", var_char, { var_char };
-# terminal = var_char, { var_char };
-# var_char = letter | digit;
+# variable = /\$[A-Za-z0-9]+/;
+# terminal = /[A-Za-z0-9]+/;
 #
 # filename = ( name, ".", extension ) | variable;
 #
-# name = letter, letter, letter, letter, letter, letter, letter, letter;
+# name = /[A-Za-z]{8}/;
+# extension = /[A-Za-z]{3}/;
 #
-# extension = letter, letter, letter;
-#
-# letter = upper_case | lower_case;
-#
-# upper_case = "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I"
-#            | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R"
-#            | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z";
-#
-# lower_case = "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i"
-#            | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r"
-#            | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z";
-#
-# folder = ( folder_char, [folder_char], [folder_char], [folder_char],
-#            [folder_char], [folder_char], [folder_char], [folder_char] )
-#        | variable;
-#
-# folder_char = letter | digit;
-#
-# digit = "0" | "1" | "2" | "3" | "4"
-#       | "5" | "6" | "7" | "8" | "9";
+# folder = /[A-Za-z0-9]{1,8}/ | variable;
 #
 # path = folder, {separator, folder};
 #
-# separator = "\";
+# separator = "\\";
 #
 # Tokens: KEYWORD (ls, cd, cat, print, exec, set, echo), WORD, DOT,
 #         SEPARATOR, VARIABLE, EQ, OPERATOR (+ - * /), LPAREN, RPAREN,
@@ -68,8 +51,7 @@
 # Variables (non-terminals): command, ls_command, cd_command,
 #         cat_command, print_command, exec_command, set_command,
 #         echo_command, expression, term, factor, variable, terminal,
-#         var_char, filename, name, extension, letter, upper_case,
-#         lower_case, folder, folder_char, digit, path, separator
+#         filename, name, extension, folder, path, separator
 #
 # Start symbol: command
 

@@ -1,0 +1,4 @@
+(executable
+ (public_name kvstore)
+ (name main)
+ (libraries kvstore))

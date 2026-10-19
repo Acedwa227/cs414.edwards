@@ -1,0 +1,4 @@
+(executable
+ (public_name assignment06)
+ (name main)
+ (libraries assignment06))

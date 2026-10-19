@@ -931,3 +931,10 @@ _opam/
 
 !Assignment*/bin/
 !Assignment*/bin/**
+
+# Assignment06 generated CMake build files
+**/out/
+
+# Keep Assignment06 OCaml executable source files
+!Assignment06/ocaml/bin/
+!Assignment06/ocaml/bin/**

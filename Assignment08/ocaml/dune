@@ -1,0 +1,8 @@
+; File: dune
+; Author: Adam Edwards
+; Date: 11/15/2026
+; Purpose: Builds main.ml into main.exe for Assignment 08.
+; AI Help: Claude (Anthropic) helped write this build file.
+
+(executable
+ (name main))

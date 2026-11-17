@@ -1,0 +1,9 @@
+(lang dune 3.24)
+
+; File: dune-project
+; Author: Adam Edwards
+; Date: 11/15/2026
+; Purpose: Marks this folder as the root of the Assignment 08 OCaml project.
+;          dune requires the (lang ...) line to come first, so this header
+;          sits below it.
+; AI Help: Claude (Anthropic) helped write this build file.
